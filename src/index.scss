@@ -1,0 +1,734 @@
+// Variables de fuente
+$generalText: 'Hind Madurai', sans-serif;
+$h2-h3-h4: 'Lora', serif;
+$titles: 'Montserrat', sans-serif;
+
+// Variables color
+
+#id28 {
+    background: #DA1111;
+}
+#id12 {
+    background: #0f416f;
+}
+#id16 {
+    background: #e66815;
+}
+#id35 {
+    background: #4b357b;
+}
+#id80 {
+    background: #737373;
+}
+#id99 {
+    background: #114208;
+} 
+#id18 {
+    background: #713501;
+} 
+#id10751 {
+    background: #0a777b;
+} 
+#id14 {
+    background: #d7a500;
+} 
+#id36 {
+    background: #39301c;
+} 
+#id27 {
+    background: #7a0600;
+} 
+#id10402 {
+    background: #00936e;
+} 
+#id9648 {
+    background: #000000;
+} 
+#id10749 {
+    background: #9e00b6;
+} 
+#id878 {
+    background: #6d9a0b;
+} 
+#id10770 {
+    background: #286be0;
+} 
+#id53 {
+    background: #250053;
+} 
+#id10752 {
+    background: #474747;
+} 
+#id37 {
+    background: #6d6d00;
+} 
+
+
+$generalBackground: rgb(255, 255, 255);
+$sectionBackground: #b0b0b0;
+$darkBackground: #cccccc;
+$colorText: rgb(0, 0, 0);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Estilos generales
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    user-select: none;
+}
+
+//Template de card contenedora de pelicula para MoviePage
+.moviePageItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    &__containerImg {
+        width: 250px;
+        min-width: 250px;
+        height: 370px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        img {
+            width: 100%;
+        }
+    }
+    &__button {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+        background: $generalBackground;
+    }
+    &__button::before {
+        content: '❤';
+        font-size: 1.8rem;
+    }
+    &__button__liked {
+        background: $generalBackground;
+    }
+    &__button__liked::before {
+        content: '❤';
+        color: red;
+    }
+}
+
+//Template de card contenedora de pelicula para listados
+
+.movieItem {
+    width: 150px;
+    height: 216.56px;
+    position: relative;
+    display: inline-block;
+    margin: 0 7px;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+    &__containerImg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 100%;
+        }
+    }
+    &__button {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+        background: $generalBackground;
+    }
+    &__button::before {
+        content: '❤';
+        font-size: 1.5rem;
+    }
+    &__button__liked {
+        background: rgb(207, 207, 207);
+    }
+    &__button__liked::before {
+        content: '❤';
+        color: red;
+    }
+}
+
+//Template para peliculas sin imagen en listados
+.NoMovieImg {
+    width: 150px;
+    height: 216.56px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: $darkBackground;
+    p {
+        width: 100%;
+        padding: 0 5px;
+        font-family: $generalText;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    &__button {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+        background: $generalBackground;
+    }
+    &__button::before {
+        content: '❤';
+        font-size: 1.5rem;
+    }
+    &__button__liked {
+        background: rgb(207, 207, 207);
+    }
+    &__button__liked::before {
+        content: '❤';
+        color: red;
+    }
+}
+
+//Template para peliculas sin imagen en MoviePage
+.NoMoviePageImg {
+    width: 250px;
+    height: 370px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+    background: $darkBackground;
+    p {
+        width: 100%;
+        padding: 0 5px;
+        font-family: $generalText;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    &__button {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+        background: $generalBackground;
+    }
+    &__button::before {
+        content: '❤';
+        font-size: 1.5rem;
+    }
+    &__button__liked {
+        background: rgb(207, 207, 207);
+    }
+    &__button__liked::before {
+        content: '❤';
+        color: red;
+    }
+}
+
+// Header
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background: $generalBackground;
+    
+}
+
+.header__containerLogo {
+    width: 150px;
+    padding: 10px 0;
+        img {
+            width: 100%;
+        }
+}
+
+// Form
+.formSearch {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 25px;
+    
+    .inputSearchMovie {
+        width: 100%;
+        max-width: 500px;
+        height: 35px;
+        padding: 0 15px;
+        font-family: $generalText;
+        border: 1px solid $darkBackground;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    .lenssSearch__container {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background: #757575;
+        img {
+            width: 70%;
+        }
+    }
+    .lenssSearch__container:hover {
+        cursor: pointer;
+    }
+}
+
+// trending home
+.trending__head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-family: $generalText;
+    
+    h2 {
+        font-size: 2.4rem;
+        font-family: $titles;
+    }
+    a {
+        font-size: 1.4rem;
+        color: $colorText;
+        text-decoration: none;
+    }
+}
+
+.loadingMovies {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 3rem;
+    font-family: $generalText;
+}
+
+.container__slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .slider {
+        padding: 10px 20px;
+        overflow: auto;
+        white-space: nowrap;
+    }
+}
+
+// Texto si no hay contenido en el slider de recomendados o en MyList en Home
+.noListMovies {
+    width: 100%;
+    padding: 20px;
+    font-family: $generalText;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+
+// Cataegories del Home
+
+.categoriesHead {
+    width: 100%;
+    padding: 15px 20px;
+    font-family: $titles;
+    font-size: 2.4rem;
+}
+
+.categories__container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 170px);
+        grid-template-rows: repeat(10, minmax(40px, 40px));
+        place-content: center;
+        place-items: center;
+        padding: 10px 0;
+        
+}
+
+.category {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-family: $generalText;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: $generalBackground;
+}
+
+
+// Página de trending, categorias, resultados busqueda
+
+.trendingComplete {
+    width: 100%;
+    padding: 10px 20px;
+    h2 {
+        width: 100%;
+        font-family: $titles;
+        font-weight: 600;
+        font-size: 2.4rem;
+        color: $colorText;
+        padding: 10px 5px;
+    }
+    &__containerMovies {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 160px));
+        gap: 20px 7px;
+        place-content: center;
+        place-items: center;
+        padding: 20px 0;
+    }
+}
+
+// Boton para cargar más peliculas en cada listado
+.nextPageSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    .currentPage {
+        padding: 0 10px;
+        font-size: 1.8rem;
+        font-family: $generalText;
+    }
+    .nextPageButton {
+        width: 100px;
+        height: 35px;
+        margin: 0 5px;
+        font-size: 1.4rem;
+        font-family: $generalText;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background: $darkBackground;
+        cursor: pointer;
+    }
+}
+
+
+
+// Pagina de pelicula individual
+
+.movieDetail {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__information {
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+        font-family: $generalText;
+        color: $colorText;
+        background: $darkBackground;
+        .information__H1MovieName {
+            font-weight: 600;
+            font-family: $titles;
+            font-size: 2.4rem;
+            
+        }
+        .information__sinopsis {
+            width: 100%;
+            padding: 16px 0;
+            .sinopsis__title {
+                font-weight: 400;
+                font-family: $h2-h3-h4;
+                font-size: 1.8rem;
+                padding-bottom: 8px;
+                color: rgb(119, 119, 119);
+            }
+            .sinopsis__text {
+                padding: 10px 0;
+                font-weight: 400;
+                font-family: $generalText;
+                font-size: 1.3rem;
+            }
+            
+        }
+        .duration, .rating {
+            padding: 5px 0;
+            font-weight: 400;
+            font-family: $generalText;
+            font-size: 1.3rem;
+        }
+        .movieCategory {
+            width: 100%;
+            &__title {
+                font-weight: 400;
+                font-family: $h2-h3-h4;
+                font-size: 1.8rem;
+                padding-bottom: 10px;
+                color: rgb(119, 119, 119);
+            }
+            &__container {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 100px);
+                grid-template-rows: repeat(auto-fill, minmax(40px, 40px));
+                gap: 10px;
+                place-content: center;
+                place-items: center;
+            }
+        }
+    }
+    &__recommendations {
+        width: 100%;
+        padding: 20px 0;
+        .recommendations__h2Title {
+            padding: 0 0 16px 20px;
+            font-weight: 400;
+            font-family: $h2-h3-h4;
+            font-size: 1.8rem;
+            color: $colorText;
+        }
+    }
+}
+
+// Footer
+footer {
+    width: 100%;
+    padding: 20px;
+    font-family: $generalText;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: $colorText;
+}
+
+
+@media (min-width: 425px) {
+
+    //Template de card contenedora de pelicula para listados
+    .movieItem {
+        width: 180px;
+        height: 266.56px;
+        &__button {
+            width: 30px;
+            height: 30px;
+        }
+        &__button::before {
+            font-size: 1.7rem;
+        }
+    }
+
+    //Template para peliculas sin imagen en listados
+    .NoMovieImg {
+        width: 180px;
+        height: 266.56px;
+        p {
+            font-size: 1.3rem;
+        }
+        &__button {
+            width: 30px;
+            height: 30px;
+        }
+        &__button::before {
+            font-size: 1.7rem;
+        }
+    }
+
+    // Página de trending, categorias, resultados busqueda
+    .trendingComplete {
+            &__containerMovies {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 180px));
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    // Cataegories del Home
+    .categories__container {
+            grid-template-columns: repeat(4, 170px);
+            grid-template-rows: repeat(5, minmax(40px, 40px));
+    }
+
+    // Página de trending, categorias, resultados busqueda
+    .trendingComplete {
+        &__containerMovies {
+            gap: 20px 20px;
+        }
+    }
+
+    .movieDetail {
+        &__information {
+            .movieCategory {
+                &__container {
+                    place-content: flex-start;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+
+    // trending home
+    .trending__head {
+        padding: 15px 60px;
+        h2 {
+            padding: 10px 0;
+            font-size: 2.8rem;
+        }
+        a {
+            font-size: 1.8rem;
+        }
+    }
+
+    .container__slider {
+        padding: 0 0 0 60px;
+        .slider {
+            padding: 10px 20px 10px 0;
+        }
+    }
+
+    // Cataegories del Home
+    .categoriesHead {
+        padding: 15px 60px;
+        font-size: 2.8rem;
+    }
+
+    .categories__container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(70px, 1fr));
+        gap: 20px 20px;
+        padding: 10px 60px;
+
+    }
+
+    .category {
+        width: 100px;
+        height: 50px;
+        border-radius: 7px;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+
+    // Página de trending, categorias, resultados busqueda
+    .trendingComplete {
+        padding: 10px 60px;
+        h2 {
+            font-size: 2.8rem;
+        }
+    }
+
+
+    //Template de card contenedora de pelicula para MoviePage
+    .moviePageItem {
+        width: 20%;
+        &__containerImg {
+            border-radius: 7px;
+            cursor: pointer;
+        }
+    }
+
+    // Pagina de pelicula individual
+    .movieDetail {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        &__information {
+            width: 60%;
+            margin: 0 0 0 30px;
+            padding: 30px;
+            background: rgb(230, 230, 230);
+            .information__H1MovieName {
+                font-size: 2.8rem;
+            }
+            .information__sinopsis {
+                .sinopsis__title {
+                    font-size: 2rem;
+                }
+                .sinopsis__text {
+                    font-size: 1.5rem;
+                }
+                
+            }
+            .duration, .rating {
+                font-size: 1.4rem;
+            }
+            .movieCategory {
+                &__title {
+                    font-size: 2rem;
+                }
+                &__container {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, 100px);
+                    grid-template-rows: repeat(auto-fill, minmax(70px, 70px));
+                    gap: 10px 15px;
+                    place-content: flex-start;
+                }
+            }
+        }
+        &__recommendations {
+            width: 100%;
+            padding: 60px 40px;
+            .recommendations__h2Title {
+                padding: 0 0 16px 20px;
+                font-weight: 400;
+                font-family: $h2-h3-h4;
+                font-size: 2rem;
+                color: $colorText;
+            }
+        }
+    }
+
+
+
+
+}
