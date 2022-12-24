@@ -1,7 +1,4 @@
 
-//import hooks
-import { useState } from "react"
-
 export const PageButtons = ( { page, setPage } ) => {
 
     //Pagination

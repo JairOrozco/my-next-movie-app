@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import { Home, SearchMovie, Trending, Category, MoviePage } from "../pages"
 
 export const AppRoutes = () => {

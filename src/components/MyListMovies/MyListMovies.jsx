@@ -3,7 +3,7 @@
 import { seeInfoLocalStorage } from '../../utils/seeInfoLocalStorage'
 
 //import components
-import { GetMovies, Movie } from '../../components'
+import { GetMovies } from '../../components'
 
 
 // small component title
@@ -12,9 +12,6 @@ const MyListMoviesTitle = () => {
         <h2 className="categoriesHead"> My List </h2>
     )
 }
-
-
-
 
 export const MyListMovies = () => {
 

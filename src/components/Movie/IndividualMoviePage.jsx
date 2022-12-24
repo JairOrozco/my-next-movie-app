@@ -8,9 +8,6 @@ import { NoMoviePageImg } from "../../components"
 import { seeInfoLocalStorage, handleLocalStorageInfo } from "../../utils/seeInfoLocalStorage"
 
 
-
-
-
 export const IndividualMoviePage = ( { movieID, poster_path, title } ) => {
 
     // url base de las imagenes de pelicula

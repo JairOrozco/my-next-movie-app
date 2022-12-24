@@ -1,14 +1,11 @@
 //import react router
 import { useParams } from "react-router-dom"
 
-//import hooks
-import { useCallback } from "react"
-
 //import customhooks
 import { useFetch } from "../hooks/useFetch"
 
 //import components
-import { Logo, IndividualMoviePage, SliderMovies, CategoryItem, NoListMovies, SingleMovieRecommendations, SingleMovieInformation } from "../components"
+import { Logo, IndividualMoviePage, SingleMovieRecommendations, SingleMovieInformation } from "../components"
 
 //import data api
 import { url_base, api_key } from '../utils/apiInfo'
