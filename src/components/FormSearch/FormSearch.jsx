@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom"
 //import hooks
 import { useForm } from "../../hooks/useForm"
 
+import lenss from '../../../public/assets/lupa.png'
+
 export const FormSearch = () => {
 
     const navigate = useNavigate()
@@ -36,7 +38,7 @@ export const FormSearch = () => {
                 autoComplete="off"
             />
             <button className="lenssSearch__container" >
-                <img src="/assets/lupa.png" alt="Ícono búsqueda" />
+                <img src={ lenss } alt="Ícono búsqueda" />
             </button>
         </form>
     )
